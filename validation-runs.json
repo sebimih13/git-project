@@ -1,0 +1,462 @@
+[
+  {
+    "artifact": "output/git-79dpyt76/verification.json",
+    "engine": "git",
+    "checkout_exit": 0,
+    "detached": false,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.020057783000083873,
+        "trace_id": "bf0a897fb6764105d0d6ed26fe4f5ec5",
+        "span_id": "5195ab459d96de7c",
+        "parent_span_id": "f7e4fe7d3b8ed2f0",
+        "hook_span_id": "f7e4fe7d3b8ed2f0"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.030060283999773674,
+        "trace_id": "bf0a897fb6764105d0d6ed26fe4f5ec5",
+        "span_id": "e3b781dc381f18ba",
+        "parent_span_id": "f7e4fe7d3b8ed2f0",
+        "hook_span_id": "f7e4fe7d3b8ed2f0"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.04006762599965441,
+        "trace_id": "bf0a897fb6764105d0d6ed26fe4f5ec5",
+        "span_id": "e36d6d1d48132fc4",
+        "parent_span_id": "f7e4fe7d3b8ed2f0",
+        "hook_span_id": "f7e4fe7d3b8ed2f0"
+      }
+    ],
+    "command": [
+      "git",
+      "-C",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/git-79dpyt76/repo",
+      "checkout",
+      "--quiet",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "4f27305e3e044667a2b2e2b735ce9e200d0be7129ec5621f74480ae1b22cc381"
+  },
+  {
+    "artifact": "output/git-9gfq559b/verification.json",
+    "engine": "git",
+    "checkout_exit": 0,
+    "detached": true,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.020060913000634173,
+        "trace_id": "2ce2f4a7df9067cd5e65b6b01fa2e3f9",
+        "span_id": "427a8ba48ee9430d",
+        "parent_span_id": "5d1e22e3c0be953a",
+        "hook_span_id": "5d1e22e3c0be953a"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.03006024400019669,
+        "trace_id": "2ce2f4a7df9067cd5e65b6b01fa2e3f9",
+        "span_id": "1065fa675e6bd1ee",
+        "parent_span_id": "5d1e22e3c0be953a",
+        "hook_span_id": "5d1e22e3c0be953a"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.04006264500094403,
+        "trace_id": "2ce2f4a7df9067cd5e65b6b01fa2e3f9",
+        "span_id": "35e2a15b71846639",
+        "parent_span_id": "5d1e22e3c0be953a",
+        "hook_span_id": "5d1e22e3c0be953a"
+      }
+    ],
+    "command": [
+      "git",
+      "-C",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/git-9gfq559b/repo",
+      "checkout",
+      "--quiet",
+      "eec707a40571f5945ca69a37a5578a5048271aba"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "730a30d4249d5a2e8705560fb2c668276130ce86f2a759e72b79f74ced580b74"
+  },
+  {
+    "artifact": "output/git-9pmp9zmj/verification.json",
+    "engine": "git",
+    "checkout_exit": 1,
+    "detached": false,
+    "failed_check": "Check2",
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.02005660299982992,
+        "trace_id": "1a45db5e2593864761804dd17598be84",
+        "span_id": "7e72c26dba37269e",
+        "parent_span_id": "e558d53b37c5508d",
+        "hook_span_id": "e558d53b37c5508d"
+      },
+      {
+        "check": "Check2",
+        "outcome": "error",
+        "duration_seconds": 0.030061733999900753,
+        "trace_id": "1a45db5e2593864761804dd17598be84",
+        "span_id": "f91962db1632ab66",
+        "parent_span_id": "e558d53b37c5508d",
+        "hook_span_id": "e558d53b37c5508d"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.04004524500123807,
+        "trace_id": "1a45db5e2593864761804dd17598be84",
+        "span_id": "0251c2b13c0805e2",
+        "parent_span_id": "e558d53b37c5508d",
+        "hook_span_id": "e558d53b37c5508d"
+      }
+    ],
+    "command": [
+      "git",
+      "-C",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/git-9pmp9zmj/repo",
+      "checkout",
+      "--quiet",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "730a30d4249d5a2e8705560fb2c668276130ce86f2a759e72b79f74ced580b74"
+  },
+  {
+    "artifact": "output/git-grh6vhnm/verification.json",
+    "engine": "git",
+    "checkout_exit": 0,
+    "detached": false,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.020051882998814108,
+        "trace_id": "d7ba2d464c10d480aed066841a00c786",
+        "span_id": "e791a6fef44c0edc",
+        "parent_span_id": "8888cc030ff76aee",
+        "hook_span_id": "8888cc030ff76aee"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.03006177499992191,
+        "trace_id": "d7ba2d464c10d480aed066841a00c786",
+        "span_id": "53bc2a87af963deb",
+        "parent_span_id": "8888cc030ff76aee",
+        "hook_span_id": "8888cc030ff76aee"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.040060195000478416,
+        "trace_id": "d7ba2d464c10d480aed066841a00c786",
+        "span_id": "d24fe591c818a2aa",
+        "parent_span_id": "8888cc030ff76aee",
+        "hook_span_id": "8888cc030ff76aee"
+      }
+    ],
+    "command": [
+      "git",
+      "-C",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/git-grh6vhnm/repo",
+      "checkout",
+      "--quiet",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "a1c1e5c42a9f21f27030e8eb6f7c8fa6127266750a35778d69aef1ff2bbaa74c"
+  },
+  {
+    "artifact": "output/git-h_klqovt/verification.json",
+    "engine": "git",
+    "checkout_exit": 0,
+    "detached": false,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.020059042999491794,
+        "trace_id": "0a814ee5e4012613c47751ae9d0f2678",
+        "span_id": "865add4e8fefc4e4",
+        "parent_span_id": "068291520ce3f4f8",
+        "hook_span_id": "068291520ce3f4f8"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.030060613999012276,
+        "trace_id": "0a814ee5e4012613c47751ae9d0f2678",
+        "span_id": "f3d61bc466768d75",
+        "parent_span_id": "068291520ce3f4f8",
+        "hook_span_id": "068291520ce3f4f8"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.04006796499925258,
+        "trace_id": "0a814ee5e4012613c47751ae9d0f2678",
+        "span_id": "81f3c8f22188d296",
+        "parent_span_id": "068291520ce3f4f8",
+        "hook_span_id": "068291520ce3f4f8"
+      }
+    ],
+    "command": [
+      "git",
+      "-C",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/git-h_klqovt/repo",
+      "checkout",
+      "--quiet",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "4f27305e3e044667a2b2e2b735ce9e200d0be7129ec5621f74480ae1b22cc381"
+  },
+  {
+    "artifact": "output/jgit-1strzmw3/verification.json",
+    "engine": "jgit",
+    "checkout_exit": 0,
+    "detached": false,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.020064132999323192,
+        "trace_id": "b548928239da5c05223e3967f5048d76",
+        "span_id": "7d140e9d0aace627",
+        "parent_span_id": "ed341865244bd542",
+        "hook_span_id": "ed341865244bd542"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.03006013500089466,
+        "trace_id": "b548928239da5c05223e3967f5048d76",
+        "span_id": "f4a7db18551ef6b6",
+        "parent_span_id": "ed341865244bd542",
+        "hook_span_id": "ed341865244bd542"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.040059856000880245,
+        "trace_id": "b548928239da5c05223e3967f5048d76",
+        "span_id": "d84052871671230a",
+        "parent_span_id": "ed341865244bd542",
+        "hook_span_id": "ed341865244bd542"
+      }
+    ],
+    "command": [
+      "java",
+      "-cp",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/build:/home/seb/Developer/jgit/org.eclipse.jgit/target/classes:/home/seb/.m2/repository/org/slf4j/slf4j-api/2.0.20/slf4j-api-2.0.20.jar:/home/seb/.m2/repository/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.jar:/home/seb/.m2/repository/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.jar",
+      "DemoCheckout",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/jgit-1strzmw3/repo",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "4f27305e3e044667a2b2e2b735ce9e200d0be7129ec5621f74480ae1b22cc381"
+  },
+  {
+    "artifact": "output/jgit-9m32x5ur/verification.json",
+    "engine": "jgit",
+    "checkout_exit": 0,
+    "detached": false,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.02005879300122615,
+        "trace_id": "8aac9bbcf138525e01b13b90121de275",
+        "span_id": "43dae4d59358d168",
+        "parent_span_id": "e3a2883e5042ab44",
+        "hook_span_id": "e3a2883e5042ab44"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.03005962399947748,
+        "trace_id": "8aac9bbcf138525e01b13b90121de275",
+        "span_id": "06f070ad0ecd3b83",
+        "parent_span_id": "e3a2883e5042ab44",
+        "hook_span_id": "e3a2883e5042ab44"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.040068305999739096,
+        "trace_id": "8aac9bbcf138525e01b13b90121de275",
+        "span_id": "186a2f845ccd7caf",
+        "parent_span_id": "e3a2883e5042ab44",
+        "hook_span_id": "e3a2883e5042ab44"
+      }
+    ],
+    "command": [
+      "java",
+      "-cp",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/build:/home/seb/Developer/jgit/org.eclipse.jgit/target/classes:/home/seb/.m2/repository/org/slf4j/slf4j-api/2.0.20/slf4j-api-2.0.20.jar:/home/seb/.m2/repository/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.jar:/home/seb/.m2/repository/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.jar",
+      "DemoCheckout",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/jgit-9m32x5ur/repo",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "730a30d4249d5a2e8705560fb2c668276130ce86f2a759e72b79f74ced580b74"
+  },
+  {
+    "artifact": "output/jgit-_1rs20wl/verification.json",
+    "engine": "jgit",
+    "checkout_exit": 0,
+    "detached": true,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.020057622999956948,
+        "trace_id": "082174ba0d07e525295d2c456db49431",
+        "span_id": "8f05305a89b89288",
+        "parent_span_id": "8d39250a03ee0ecf",
+        "hook_span_id": "8d39250a03ee0ecf"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.03006065400040825,
+        "trace_id": "082174ba0d07e525295d2c456db49431",
+        "span_id": "6ac73b33fd21b9f7",
+        "parent_span_id": "8d39250a03ee0ecf",
+        "hook_span_id": "8d39250a03ee0ecf"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.040057575000901124,
+        "trace_id": "082174ba0d07e525295d2c456db49431",
+        "span_id": "5cc96fbc75dbdeb2",
+        "parent_span_id": "8d39250a03ee0ecf",
+        "hook_span_id": "8d39250a03ee0ecf"
+      }
+    ],
+    "command": [
+      "java",
+      "-cp",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/build:/home/seb/Developer/jgit/org.eclipse.jgit/target/classes:/home/seb/.m2/repository/org/slf4j/slf4j-api/2.0.20/slf4j-api-2.0.20.jar:/home/seb/.m2/repository/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.jar:/home/seb/.m2/repository/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.jar",
+      "DemoCheckout",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/jgit-_1rs20wl/repo",
+      "5377576cb4b902c1bcbce102a7c182aec4a7f128"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "4f27305e3e044667a2b2e2b735ce9e200d0be7129ec5621f74480ae1b22cc381"
+  },
+  {
+    "artifact": "output/jgit-lkobbi_y/verification.json",
+    "engine": "jgit",
+    "checkout_exit": 1,
+    "detached": false,
+    "failed_check": "Check2",
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.02005932199972449,
+        "trace_id": "b8c5e438f9bf2ccfc1bd82a0a45444ab",
+        "span_id": "1772fa264c063d83",
+        "parent_span_id": "98a6b8847d367670",
+        "hook_span_id": "98a6b8847d367670"
+      },
+      {
+        "check": "Check2",
+        "outcome": "error",
+        "duration_seconds": 0.030062134999752743,
+        "trace_id": "b8c5e438f9bf2ccfc1bd82a0a45444ab",
+        "span_id": "f1518fafb304ec9c",
+        "parent_span_id": "98a6b8847d367670",
+        "hook_span_id": "98a6b8847d367670"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.04005963499912468,
+        "trace_id": "b8c5e438f9bf2ccfc1bd82a0a45444ab",
+        "span_id": "50e62e71f38d27e5",
+        "parent_span_id": "98a6b8847d367670",
+        "hook_span_id": "98a6b8847d367670"
+      }
+    ],
+    "command": [
+      "java",
+      "-cp",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/build:/home/seb/Developer/jgit/org.eclipse.jgit/target/classes:/home/seb/.m2/repository/org/slf4j/slf4j-api/2.0.20/slf4j-api-2.0.20.jar:/home/seb/.m2/repository/com/googlecode/javaewah/JavaEWAH/1.2.3/JavaEWAH-1.2.3.jar:/home/seb/.m2/repository/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.jar",
+      "DemoCheckout",
+      "/home/seb/Developer/JEGit/examples/post-checkout-trace2/output/jgit-lkobbi_y/repo",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "4f27305e3e044667a2b2e2b735ce9e200d0be7129ec5621f74480ae1b22cc381"
+  },
+  {
+    "artifact": "output/git-6bu1sq6j/verification.json",
+    "engine": "git",
+    "checkout_exit": 0,
+    "detached": false,
+    "failed_check": null,
+    "checks": [
+      {
+        "check": "Check1",
+        "outcome": "success",
+        "duration_seconds": 0.020057711000845302,
+        "trace_id": "c56da190c485b536a00887fe1e5a8ec7",
+        "span_id": "0af434f110787677",
+        "parent_span_id": "381aace4a2d46469",
+        "hook_span_id": "381aace4a2d46469"
+      },
+      {
+        "check": "Check2",
+        "outcome": "success",
+        "duration_seconds": 0.030060230999879423,
+        "trace_id": "c56da190c485b536a00887fe1e5a8ec7",
+        "span_id": "213d842249050c45",
+        "parent_span_id": "381aace4a2d46469",
+        "hook_span_id": "381aace4a2d46469"
+      },
+      {
+        "check": "Check3",
+        "outcome": "success",
+        "duration_seconds": 0.04006505100005597,
+        "trace_id": "c56da190c485b536a00887fe1e5a8ec7",
+        "span_id": "e32b4ef501edb3ac",
+        "parent_span_id": "381aace4a2d46469",
+        "hook_span_id": "381aace4a2d46469"
+      }
+    ],
+    "command": [
+      "git",
+      "-C",
+      "/home/seb/Developer/git-project/output/git-6bu1sq6j/repo",
+      "checkout",
+      "--quiet",
+      "feature/demo"
+    ],
+    "git_version": "git version 2.56.0",
+    "collector_sha256": "1f58faf7fe63ed565368aafcb59be36ec110e6c647a1980f93707947235e235b"
+  }
+]

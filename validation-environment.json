@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-03",
+  "sources": {
+    "git": {
+      "commit": "6de20f6092dcf9bdb1c8efe03db4b70c82b423dd",
+      "branch": "master",
+      "working_tree_status": "",
+      "tracked_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "jgit": {
+      "commit": "71e4702679a4d3a6b2193ef5236f79d51a16a851",
+      "branch": "trace2-v7.8.0.202609011348-r",
+      "working_tree_status": "M Documentation/config-options.md\n M org.eclipse.jgit.test/org.eclipse.jgit.core--All-Tests.launch\n?? Documentation/trace2-receiver.md",
+      "tracked_patch_sha256": "50ba16fb7b30abe72b648d4bccfb5df6a9d30152dcd343dfe8eaf7d3012dab2a"
+    },
+    "egit": {
+      "commit": "f6c2cc0b63956d1a8fa46bae3cc595a6e218983a",
+      "branch": "trace2-v7.8.0.202609011348-r",
+      "working_tree_status": "M org.eclipse.egit.core.test/org.eclipse.egit.core--All-Tests.launch\n M org.eclipse.egit.target/egit-4.40.target",
+      "tracked_patch_sha256": "735a950962933f799ff84e302fd9eb537a82d2cddb4d6a1b545b1ae9a05f0a88"
+    },
+    "trace2receiver": {
+      "commit": "f0a78d12a6470fcc6f2712bb15a5d03eab8059ae",
+      "branch": "main",
+      "working_tree_status": "",
+      "tracked_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "runtime": {
+    "os": "Linux-7.2.10-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "python": "3.14.8",
+    "go": "go version go1.27.2 linux/amd64",
+    "java_runtime": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)",
+    "jgit_build_jdk": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)"
+  },
+  "artifacts_sha256": {
+    "/home/seb/Developer/jgit/org.eclipse.jgit/target/classes/org/eclipse/jgit/util/Trace2.class": "e2376fe3a04771df4daf860d427307b40b5c33b68ebfae98209cfd8b71e671a1",
+    "/home/seb/Developer/jgit/org.eclipse.jgit/target/classes/org/eclipse/jgit/util/FS.class": "04dbce7bee8bef3ca23779a3effa428d20c35691f90b1204f946d7bafecfaa55",
+    "/home/seb/Developer/jgit/org.eclipse.jgit/target/classes/org/eclipse/jgit/api/CheckoutCommand.class": "46c537875697f75840faa5ad7d8def751190a4fb5cf8119750bc91ea12a301d4",
+    "/usr/bin/git": "20739384fd97e904e8545b39753c3e42a0cd7a8016d382f6ec1aadc910f8c872"
+  },
+  "limitations": [
+    "Installed C Git executable is not proven to match the reference source checkout",
+    "EGit checkout route inspected in source; no live PDE/UI checkout executed",
+    "OTLP HTTP tested against temporary loopback server, not Tempo or Grafana",
+    "Finite-capture adapter; no production streaming processor",
+    "No performance claim: check bodies are synthetic sleeps"
+  ]
+}
