@@ -1,0 +1,91 @@
+name: git-trace2
+
+services:
+  grafana:
+    image: grafana/grafana:13.3.0
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${GRAFANA_PORT:-3000}:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro,Z
+    depends_on:
+      - tempo
+      - prometheus
+    healthcheck:
+      test: [CMD-SHELL, "wget -q -O /dev/null http://127.0.0.1:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  prometheus:
+    image: prom/prometheus:v3.13.1
+    restart: unless-stopped
+    command:
+      - --config.file=/etc/prometheus/prometheus.yaml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=7d
+      - --web.enable-remote-write-receiver
+      - --enable-feature=exemplar-storage
+    ports:
+      - "127.0.0.1:${PROMETHEUS_PORT:-9090}:9090"
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yaml:ro,Z
+      - prometheus-data:/prometheus
+    healthcheck:
+      test: [CMD-SHELL, "wget -q -O /dev/null http://127.0.0.1:9090/-/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  tempo:
+    image: grafana/tempo:3.1.1
+    restart: unless-stopped
+    command: [-target=all, -config.file=/etc/tempo.yaml]
+    ports:
+      - "127.0.0.1:${TEMPO_PORT:-3200}:3200"
+    volumes:
+      - ./tempo.yaml:/etc/tempo.yaml:ro,Z
+      - tempo-data:/var/tempo
+    depends_on:
+      tempo-init:
+        condition: service_completed_successfully
+      prometheus:
+        condition: service_healthy
+
+  tempo-init:
+    image: alpine:3.24
+    user: "0:0"
+    command: [chown, "10001:10001", /var/tempo]
+    volumes:
+      - tempo-data:/var/tempo
+
+  collector:
+    image: git-trace2-collector:local
+    build:
+      context: ./collector
+      additional_contexts:
+        trace2receiver: ${TRACE2_RECEIVER_SOURCE:-../../trace2receiver}
+    restart: unless-stopped
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    command: [--config=/etc/otelcol/config.yaml]
+    volumes:
+      - ./collector/config.yaml:/etc/otelcol/config.yaml:ro,Z
+      - ./run:/run/trace2:Z
+    depends_on:
+      - tempo
+    healthcheck:
+      test: [CMD-SHELL, "test -S /run/trace2/trace2.sock && wget -q -O /dev/null http://127.0.0.1:8888/metrics"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  grafana-data:
+  prometheus-data:
+  tempo-data:

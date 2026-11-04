@@ -1,0 +1,19 @@
+dist:
+  module: local/trace2-otelcol
+  name: trace2-otelcol
+  description: Git Trace2 to Tempo Collector
+  output_path: /build/output
+  version: 0.1.0
+
+receivers:
+  - gomod: github.com/git-ecosystem/trace2receiver v0.0.0
+exporters:
+  - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.157.0
+processors:
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.157.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.157.0
+providers:
+  - gomod: go.opentelemetry.io/collector/confmap/provider/fileprovider v1.63.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.63.0
+replaces:
+  - github.com/git-ecosystem/trace2receiver => /src/trace2receiver
