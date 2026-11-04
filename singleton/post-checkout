@@ -1,0 +1,3 @@
+#!/bin/sh
+# exec preserves this hook's PID, allowing exact receiver-side correlation.
+exec python3 "$(dirname "$0")/checks.py" "$@"
